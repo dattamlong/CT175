@@ -1,0 +1,1 @@
+{"name":"Local: topo","url":"/home/dattuanzz/dev/CT175/topo.c","tests":[{"id":1714982927421,"input":"3 2  \n1 3\n3 2","output":"20 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/dattuanzz/dev/CT175/topo.c","group":"local","local":true}

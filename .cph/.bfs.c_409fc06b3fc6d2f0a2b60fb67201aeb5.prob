@@ -1,0 +1,1 @@
+{"name":"Local: bfs","url":"/home/dattuanzz/dev/CT175/bfs.c","tests":[{"id":1714981823777,"input":"5 5\n1 3\n1 4\n1 5\n2 4\n2 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/dattuanzz/dev/CT175/bfs.c","group":"local","local":true}
