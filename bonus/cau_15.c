@@ -53,6 +53,19 @@ int main()
         }
     }
 
+    for (int i = 1; i <= n; i++)
+    {
+        if (maxRank == rank[i])
+        {
+            a[i][n + 2] = 1;
+        }
+    }
+
+    t[n + 1] = T[n + 1] = 0;
+    maxRank++;
+    n += 2;
+    rank[n] = maxRank;
+
     // luot di
     for (int i = 2; i <= maxRank; i++)
     {
@@ -60,6 +73,7 @@ int main()
             if (rank[j] == i)
             {
                 for (int k = 1; k <= n; k++)
+                {
                     if (a[k][j])
                     {
                         if (t[j] < t[k] + d[k])
@@ -68,11 +82,12 @@ int main()
                             T[j] = t[j];
                         }
                     }
+                }
             }
     }
 
     // luot ve
-    for (int i = maxRank - 1; i >= 1; i--)
+    for (int i = maxRank - 2; i >= 1; i--)
     {
 
         for (int j = 1; j <= n; j++)
@@ -93,9 +108,10 @@ int main()
             }
     }
 
-    for (int i = 1; i <= n + 2; i++)
-        if (t[i] == T[i])
-            printf("%d\n", i);
+    printf("%d\n", t[n]);
+    for (int i = 1; i <= n; i++)
+
+        printf("%d-%d\n", t[i], T[i]);
 
     return 0;
 }
