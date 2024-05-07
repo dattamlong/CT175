@@ -1,0 +1,1 @@
+{"name":"Local: cau_1","url":"/home/dattuanzz/dev/CT175/destroys/cau_1.c","tests":[{"id":1715054812155,"input":"3 2  \n1 3\n2 3","output":"HOP LE"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/dattuanzz/dev/CT175/destroys/cau_1.c","group":"local","local":true}
