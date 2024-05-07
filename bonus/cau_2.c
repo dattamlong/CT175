@@ -1,22 +1,22 @@
 #include <stdio.h>
-#define maxn 100
-#define oo 9999
+#define MAX_N 100
+#define INFINITY 9999
 
-int n, m, f, d[maxn], p[maxn], a[maxn][maxn];
+int n, m, f, d[MAX_N], p[MAX_N], a[MAX_N][MAX_N];
 
 int main()
 {
-    scanf("%d%d%d", &n, &m, &f);
+    scanf("%d%d", &n, &m);
     for (int i = 1; i <= m; i++)
     {
-        int u, v, w;
-        scanf("%d%d%d", &u, &v, &w);
-        a[u][v] = a[v][u] = w;
+        int u, v, w, y;
+        scanf("%d%d%d%d", &u, &v, &w, &y);
+        a[u][v] = a[v][u] = w + y;
     }
 
     for (int i = 1; i <= n; i++)
     {
-        d[i] = oo;
+        d[i] = INFINITY;
         p[i] = 0;
     }
 
@@ -25,7 +25,7 @@ int main()
     for (int i = 1; i <= n; i++)
     {
 
-        int MIN = oo, u;
+        int MIN = INFINITY, u;
         for (int j = 1; j <= n; j++)
         {
             if (d[j] < MIN && !p[j])
@@ -48,15 +48,13 @@ int main()
     int total = 0;
     for (int i = 1; i <= n; i++)
     {
+
         total += d[i];
     }
 
-    total = f - total;
+    total += (n - 1) * 6;
 
-    if (total >= 0)
-        printf("OK");
-    else
-        printf("%d", (-1) * total);
+    printf("%d", total);
 
     return 0;
 }
